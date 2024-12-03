@@ -1,6 +1,7 @@
 # Code example
 
 ## Function to add two numbers
+```py
 python title="Add numbers" linenums="5" hl_lines="2"
 def add_two_numbers(num1, num2):
     return num1 + num2
