@@ -83,7 +83,6 @@ markdown_extensions:
   - admonition
   - pymdownx.details
 
-
 extra:
   social:
     - icon: simple/youtube
@@ -124,5 +123,8 @@ plugins:
       pagination_per_page: 5
   - search
   - tags
+
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js  # Add this line
 
 copyright: Copyright &copy; 2024 Goran
