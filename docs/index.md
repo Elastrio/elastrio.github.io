@@ -17,4 +17,4 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
         ...       # Other markdown pages, images and other files.
 
 
-I like to drink :beer: and play :tennis:  how about you :like:
+I like to drink :beer: and play :tennis:  how about you what do you :thumbsup: like to do

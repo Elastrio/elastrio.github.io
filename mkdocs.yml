@@ -44,6 +44,7 @@ theme:
     - toc.follow
     - toc.integrate
     - navigation.top
+    - diagrams  # Add this line
 
 nav:
   - Home: index.md
