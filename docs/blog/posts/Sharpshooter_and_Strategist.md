@@ -9,6 +9,7 @@ tags:
 
 # Sharpshooter and Strategist
 ![Sharpshooter and Strategist](img/sshoters.png)
+<!-- more -->
 ## Balancing Hunter Driven Development and Systems Thinking for Long-Term Success
 
 In the fast-paced tech world, **Hunter Driven Development**—a relentless focus on hitting targets—powers groundbreaking innovation and fuels rapid achievements. To turn these wins into lasting success, we must also prepare for long-term sustainability, ensuring our bold strides today lay the foundation for future growth.
@@ -32,4 +33,4 @@ This synergy of Hunter Driven Development and Systems Thinking is more than just
 
 #HunterDrivenDevelopment #SystemsThinking #Leadership #Innovation #Strategy #HolisticThinking
 
-<!-- more -->
+
