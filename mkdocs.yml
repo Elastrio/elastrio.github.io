@@ -33,6 +33,33 @@ theme:
 
   features:
     - navigation.footer
+    - header.autohide
+    - announce.dismiss
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - toc.follow
+    - toc.integrate
+    - navigation.top
+
+nav:
+  - Home: index.md
+  - About:
+      - Team: about/team.md
+      - Contact: about/contact.md
+  - Blog: blog/index.md
+  - Documentation:
+      - Introduction: introduction.md
+      - Getting Started: getting-started.md
+      - Examples:
+          - Code Examples: code-exaples.md  # Corrected filename
+          - Diagrams: diagram-examples.md
+          - Content Tabs: content-tabs.md
+          - Admonitions: admonitions.md
+      - API: api.md
 
 markdown_extensions:
   - attr_list
@@ -66,11 +93,10 @@ extra:
     - name: English
       link: / 
       lang: en
-    - name: Norwagain
+    - name: Norwegian
       link: /no/
       lang: no
   homepage: /
-
   consent:
     title: Cookie consent
     description: >- 
@@ -82,8 +108,20 @@ extra:
       - accept
       - manage
 
-
 plugins:
   - privacy
-  
+  - blog:
+      blog_dir: blog
+      post_date_format: medium
+      post_url_format: "{slug}"
+      post_excerpt: required
+      post_excerpt_max_authors: 1
+      post_readtime: true
+      archive: true
+      categories: true
+      pagination: true
+      pagination_per_page: 5
+  - search
+  - tags
+
 copyright: Copyright &copy; 2024 Goran
