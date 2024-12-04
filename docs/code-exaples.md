@@ -1,4 +1,4 @@
-# Code example
+# Code A chnge here
 
 ## Function to add two numbers
 ```python title="Add numbers" linenums="5" hl_lines="2"
@@ -28,5 +28,5 @@ console.log("The concatenated string is:", result);
 graph LR
     1[start]-->2
     2-->3
-    1--IDEMO-->3
+    1--yes-->3
 ```
