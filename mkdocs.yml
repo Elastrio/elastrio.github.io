@@ -89,13 +89,6 @@ extra:
       link: https://youtube.com/
     - icon: simple/linkedin
       link: https://www.linkedin.com/in/goranradanovic/
-  alternate:
-    - name: English
-      link: / 
-      lang: en
-    - name: Norwegian
-      link: /no/
-      lang: no
   homepage: /
   consent:
     title: Cookie consent
