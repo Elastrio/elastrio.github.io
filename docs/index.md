@@ -1,20 +1,29 @@
-# Welcome to MkDocs
+---
+title: Welcome to Elastrio
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Welcome to Elastrio
 
-## Commands
+Elastrio is your go-to platform for [your main offering or tagline].
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Features
 
-## Project layout
+- **Feature 1**: Brief description of feature 1.
+- **Feature 2**: Brief description of feature 2.
+- **Feature 3**: Brief description of feature 3.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## Get Started
 
+To get started, [provide a call to action, such as a link to your documentation, sign-up page, or download link].
 
-I like to drink :beer: and play :tennis:  how about you what do you :thumbsup: like to do
+## About Us
+
+Learn more about Elastrio and our mission to [briefly describe your mission or values].
+
+## Contact Us
+
+Have questions? [Provide contact information or a link to your contact page].
+
+---
+
+© 2024 Elastrio. All rights reserved.
