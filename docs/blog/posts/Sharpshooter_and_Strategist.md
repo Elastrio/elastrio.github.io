@@ -2,8 +2,9 @@
 title: Sharpshooter and Strategist
 date: 2024-01-01
 tags:
-  - introduction
-  - welcome
+  - HunterDrivenDevelopment 
+  - Leadership
+  - Strategy
 ---
 
 
