@@ -1,5 +1,5 @@
 site_name: Elastrio Docs
-site_url: https://docs.elastrio.com
+site_url: https://elastrio.com
 theme:
   name: material
   favicon: assets/favicon.ico
