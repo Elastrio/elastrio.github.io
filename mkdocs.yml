@@ -88,7 +88,7 @@ extra:
     - icon: simple/youtube
       link: https://youtube.com/
     - icon: simple/linkedin
-      link: https://www.linkedin.com/in/goranradanovic/
+      link: https://www.linkedin.com/
   homepage: /
   consent:
     title: Cookie consent
@@ -120,4 +120,4 @@ plugins:
 extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js  # Add this line
 
-copyright: Copyright &copy; 2024 Goran
+copyright: Copyright &copy; 2025 ELastrio 
