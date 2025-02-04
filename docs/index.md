@@ -24,6 +24,8 @@ Learn more about Elastrio and our mission to [briefly describe your mission or v
 
 Have questions? [Provide contact information or a link to your contact page].
 
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="85efa01b-fcb9-46db-ac16-cd9e2a2c5526" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
 ---
 
 © 2024 Elastrio. All rights reserved.
