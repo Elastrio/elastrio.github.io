@@ -1,0 +1,294 @@
+---
+---
+
+<section id="contact" class="contact">
+	<div class="container">
+		<div class="contact-content">
+			<div class="contact-info">
+				<h2>Let's Create Something Amazing</h2>
+				<p class="contact-description">
+					Ready to transform your ideas into reality? Let's collaborate and build something 
+					extraordinary together. Reach out to us and let's start the conversation.
+				</p>
+				
+				<div class="contact-details">
+					<div class="contact-item">
+						<div class="contact-icon">
+							<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2"/>
+								<polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+							</svg>
+						</div>
+						<div>
+							<h4>Email</h4>
+							<p>hello@elastrio.com</p>
+						</div>
+					</div>
+					
+					<div class="contact-item">
+						<div class="contact-icon">
+							<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M21 10C21 17 12 23 12 23S3 17 3 10A9 9 0 0 1 12 1A9 9 0 0 1 21 10Z" stroke="currentColor" stroke-width="2"/>
+								<circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+							</svg>
+						</div>
+						<div>
+							<h4>Location</h4>
+							<p>Global Remote Team</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="contact-form-container">
+				<form class="contact-form" id="contactForm">
+					<div class="form-group">
+						<input type="text" id="name" name="name" placeholder="Your Name" required>
+					</div>
+					<div class="form-group">
+						<input type="email" id="email" name="email" placeholder="Your Email" required>
+					</div>
+					<div class="form-group">
+						<textarea id="message" name="message" placeholder="Tell us about your project" rows="5" required></textarea>
+					</div>
+					<button type="submit" class="submit-btn">
+						<span>Send Message</span>
+						<div class="btn-loading" id="btnLoading"></div>
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	// Astro Island for contact form interactivity
+	const contactForm = document.getElementById('contactForm') as HTMLFormElement;
+	const submitBtn = contactForm?.querySelector('.submit-btn') as HTMLButtonElement;
+	const btnLoading = document.getElementById('btnLoading') as HTMLElement;
+
+	if (contactForm && submitBtn) {
+		contactForm.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			
+			// Show loading state
+			submitBtn.classList.add('loading');
+			submitBtn.disabled = true;
+			
+			// Simulate form submission (replace with actual API call)
+			setTimeout(() => {
+				submitBtn.classList.remove('loading');
+				submitBtn.disabled = false;
+				
+				// Show success message
+				const formData = new FormData(contactForm);
+				alert(`Thank you for your message! We'll get back to you soon.`);
+				contactForm.reset();
+			}, 2000);
+		});
+	}
+
+	// Add focus effects to form inputs
+	const formInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
+	formInputs.forEach(input => {
+		input.addEventListener('focus', () => {
+			input.parentElement?.classList.add('focused');
+		});
+		
+		input.addEventListener('blur', () => {
+			if (!(input as HTMLInputElement).value) {
+				input.parentElement?.classList.remove('focused');
+			}
+		});
+	});
+</script>
+
+<style>
+	.contact {
+		padding: 8rem 0;
+		background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+	}
+
+	.contact-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: start;
+	}
+
+	.contact-info h2 {
+		font-size: clamp(2.5rem, 5vw, 3.5rem);
+		font-weight: 700;
+		margin: 0 0 1.5rem 0;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.contact-description {
+		font-size: 1.2rem;
+		line-height: 1.6;
+		color: rgba(255, 255, 255, 0.8);
+		margin-bottom: 3rem;
+	}
+
+	.contact-details {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.contact-item {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.contact-icon {
+		width: 50px;
+		height: 50px;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+
+	.contact-icon svg {
+		width: 24px;
+		height: 24px;
+		color: white;
+	}
+
+	.contact-item h4 {
+		margin: 0 0 0.25rem 0;
+		color: white;
+		font-size: 1.1rem;
+		font-weight: 600;
+	}
+
+	.contact-item p {
+		margin: 0;
+		color: rgba(255, 255, 255, 0.7);
+	}
+
+	.contact-form-container {
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 20px;
+		padding: 2.5rem;
+	}
+
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.form-group {
+		position: relative;
+	}
+
+	.form-group input,
+	.form-group textarea {
+		width: 100%;
+		padding: 1rem;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 12px;
+		color: white;
+		font-size: 1rem;
+		transition: all 0.3s ease;
+		resize: vertical;
+	}
+
+	.form-group input::placeholder,
+	.form-group textarea::placeholder {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	.form-group input:focus,
+	.form-group textarea:focus {
+		outline: none;
+		border-color: #667eea;
+		background: rgba(255, 255, 255, 0.08);
+	}
+
+	.form-group.focused input,
+	.form-group.focused textarea {
+		border-color: #667eea;
+		background: rgba(255, 255, 255, 0.08);
+	}
+
+	.submit-btn {
+		padding: 1rem 2rem;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+		border: none;
+		border-radius: 12px;
+		font-size: 1.1rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+	}
+
+	.submit-btn:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+	}
+
+	.submit-btn:disabled {
+		cursor: not-allowed;
+		opacity: 0.7;
+	}
+
+	.btn-loading {
+		width: 20px;
+		height: 20px;
+		border: 2px solid transparent;
+		border-top: 2px solid white;
+		border-radius: 50%;
+		animation: spin 1s linear infinite;
+		display: none;
+	}
+
+	.submit-btn.loading .btn-loading {
+		display: block;
+	}
+
+	.submit-btn.loading span {
+		opacity: 0.7;
+	}
+
+	@keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+	}
+
+	@media (max-width: 768px) {
+		.contact {
+			padding: 4rem 0;
+		}
+
+		.contact-content {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
+
+		.contact-form-container {
+			padding: 2rem;
+		}
+
+		.contact-details {
+			gap: 1.5rem;
+		}
+	}
+</style>

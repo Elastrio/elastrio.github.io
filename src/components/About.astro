@@ -1,0 +1,195 @@
+---
+---
+
+<section id="about" class="about">
+	<div class="container">
+		<div class="about-content">
+			<div class="about-text">
+				<h2>About Elastrio</h2>
+				<p class="lead">
+					We are a forward-thinking digital agency that believes in the power of elastic thinking 
+					and adaptive solutions.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+					ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+					ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</p>
+				<p>
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+					nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+					officia deserunt mollit anim id est laborum.
+				</p>
+				
+				<div class="stats">
+					<div class="stat">
+						<div class="stat-number">50+</div>
+						<div class="stat-label">Projects Completed</div>
+					</div>
+					<div class="stat">
+						<div class="stat-number">5</div>
+						<div class="stat-label">Years Experience</div>
+					</div>
+					<div class="stat">
+						<div class="stat-number">100%</div>
+						<div class="stat-label">Client Satisfaction</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="about-visual">
+				<div class="visual-element">
+					<div class="rotating-circle"></div>
+					<div class="pulse-dot"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.about {
+		padding: 8rem 0;
+		background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+		position: relative;
+	}
+
+	.about-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	.about-text h2 {
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		font-weight: 700;
+		margin: 0 0 2rem 0;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.lead {
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: rgba(255, 255, 255, 0.9);
+		margin-bottom: 2rem;
+		line-height: 1.4;
+	}
+
+	.about-text p {
+		font-size: 1.1rem;
+		line-height: 1.7;
+		color: rgba(255, 255, 255, 0.7);
+		margin-bottom: 1.5rem;
+	}
+
+	.stats {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.stat {
+		text-align: center;
+	}
+
+	.stat-number {
+		font-size: 2.5rem;
+		font-weight: 700;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-label {
+		color: rgba(255, 255, 255, 0.6);
+		font-size: 0.9rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	.about-visual {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 500px;
+	}
+
+	.visual-element {
+		position: relative;
+		width: 300px;
+		height: 300px;
+	}
+
+	.rotating-circle {
+		width: 100%;
+		height: 100%;
+		border: 2px solid rgba(102, 126, 234, 0.3);
+		border-top: 2px solid #667eea;
+		border-radius: 50%;
+		animation: rotate 10s linear infinite;
+	}
+
+	.pulse-dot {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 20px;
+		height: 20px;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		border-radius: 50%;
+		animation: pulse 2s ease-in-out infinite;
+	}
+
+	@keyframes rotate {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes pulse {
+		0%, 100% {
+			transform: translate(-50%, -50%) scale(1);
+			opacity: 1;
+		}
+		50% {
+			transform: translate(-50%, -50%) scale(1.5);
+			opacity: 0.7;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.about {
+			padding: 4rem 0;
+		}
+
+		.about-content {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
+
+		.stats {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.about-visual {
+			height: 300px;
+		}
+
+		.visual-element {
+			width: 200px;
+			height: 200px;
+		}
+	}
+</style>
