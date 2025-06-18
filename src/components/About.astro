@@ -37,60 +37,74 @@
 				</div>
 			</div>
 			
-			<div class="about-visual">
-				<div class="visual-element">
-					<div class="rotating-circle"></div>
-					<div class="pulse-dot"></div>
-				</div>
-			</div>
+
 		</div>
 	</div>
+	<!-- Apple-style unit link overlay -->
+	<a class="unit-link" href="#contact" aria-hidden="true" tabindex="-1">&nbsp;</a>
 </section>
 
 <style>
 	.about {
-		padding: 8rem 0;
-		background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    padding: 100px 0;
+    background: linear-gradient(
+        180deg,
+        #BADAED 0%,
+        #C9E2EE 40%,
+        #EDF2F5 100% 
+    );
+    color: #1d1d1f;
+    position: relative;
+    overflow: hidden;
+		max-width: 3200px;
+		margin: 0 auto 16px auto;
+}
+
+	.about .container {
 		position: relative;
+		z-index: 2;
 	}
 
 	.about-content {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 4rem;
+		grid-template-columns: 1fr;
+		gap: 56px;
 		align-items: center;
+		text-align: center;
+		max-width: 692px;
+		margin: 0 auto;
 	}
 
 	.about-text h2 {
-		font-size: clamp(2.5rem, 5vw, 4rem);
-		font-weight: 700;
-		margin: 0 0 2rem 0;
-		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
+		font-size: clamp(40px, 5vw, 56px);
+		font-weight: 600;
+		margin: 0 0 12px 0;
+		color: #1d1d1f;
+		line-height: 1.07;
+		letter-spacing: -0.005em;
 	}
 
 	.lead {
-		font-size: 1.5rem;
-		font-weight: 500;
-		color: rgba(255, 255, 255, 0.9);
-		margin-bottom: 2rem;
-		line-height: 1.4;
+		font-size: 21px;
+		font-weight: 400;
+		color: rgba(29, 29, 31, 0.8);
+		margin-bottom: 28px;
+		line-height: 1.38;
 	}
 
 	.about-text p {
-		font-size: 1.1rem;
-		line-height: 1.7;
-		color: rgba(255, 255, 255, 0.7);
-		margin-bottom: 1.5rem;
+		font-size: 17px;
+		line-height: 1.47;
+		color: rgba(29, 29, 31, 0.7);
+		margin-bottom: 20px;
 	}
 
 	.stats {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: 2rem;
-		margin-top: 3rem;
+		gap: 32px;
+		margin-top: 48px;
+		justify-items: center;
 	}
 
 	.stat {
@@ -100,15 +114,12 @@
 	.stat-number {
 		font-size: 2.5rem;
 		font-weight: 700;
-		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
+		color: #1d1d1f;
 		margin-bottom: 0.5rem;
 	}
 
 	.stat-label {
-		color: rgba(255, 255, 255, 0.6);
+		color: rgba(29, 29, 31, 0.7);
 		font-size: 0.9rem;
 		text-transform: uppercase;
 		letter-spacing: 1px;
@@ -130,8 +141,8 @@
 	.rotating-circle {
 		width: 100%;
 		height: 100%;
-		border: 2px solid rgba(102, 126, 234, 0.3);
-		border-top: 2px solid #667eea;
+		border: 2px solid rgba(29, 29, 31, 0.15);
+		border-top: 2px solid rgba(29, 29, 31, 0.4);
 		border-radius: 50%;
 		animation: rotate 10s linear infinite;
 	}
@@ -143,7 +154,7 @@
 		transform: translate(-50%, -50%);
 		width: 20px;
 		height: 20px;
-		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		background: rgba(29, 29, 31, 0.6);
 		border-radius: 50%;
 		animation: pulse 2s ease-in-out infinite;
 	}
@@ -168,19 +179,49 @@
 		}
 	}
 
+	.about .unit-link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.about .unit-link:hover {
+		background: rgba(29, 29, 31, 0.02);
+	}
+
 	@media (max-width: 768px) {
 		.about {
-			padding: 4rem 0;
+			padding: 64px 0;
 		}
 
 		.about-content {
-			grid-template-columns: 1fr;
-			gap: 3rem;
+			gap: 48px;
+		}
+
+		.about-text h2 {
+			font-size: clamp(32px, 7vw, 40px);
+			line-height: 1.1;
+		}
+
+		.lead {
+			font-size: 19px;
+			line-height: 1.42;
+		}
+
+		.about-text p {
+			font-size: 17px;
 		}
 
 		.stats {
 			grid-template-columns: 1fr;
-			gap: 1.5rem;
+			gap: 24px;
+			margin-top: 40px;
 		}
 
 		.about-visual {
